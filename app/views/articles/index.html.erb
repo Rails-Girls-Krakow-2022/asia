@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+p4 {
+    background: grey;
+    font-family: "Lucida Handwriting";
+}
+p3 {
+    background:  #ffcccc;
+}
+p2 {
+    background: lightgreen;
+}
+p1 {
+    background: lightblue;
+}
+h1 {
+   border: 15px dotted violet; 
+   background: yellow;
+   text-align: center;
+}
+table, th, td {
+  border: 15px dashed;
+  border-radius: 8px;
+  border-top-style: dotted;
+  font-family: "Lucida Handwriting";
+  border-color: pink green red blue;
+}
+</style>
+</head>
+<body>
+<h1>Article index</h1>
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+<table>
+  <tr>
+    <th><p1>Hello Rails</p1></th>
+    <th><p2>Hello Rails<p2></th>
+  </tr>
+  <tr>
+    <td><p3>I am on Rails!<p3></td>
+    <td><p4>I am on Rails!<p4></td>
+  </tr>
+</table> 
+</body>
+</html>
+<h1>Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+      <%= article.body %>
+    </li>
+  <% end %>
+</ul>
+
